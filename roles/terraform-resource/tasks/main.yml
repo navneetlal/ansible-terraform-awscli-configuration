@@ -1,0 +1,12 @@
+- name: "show files"
+  shell: "pwd"
+
+- name: Create Resources using terraform
+  terraform:
+    project_path: "{{ project_dir }}"
+    state: present
+    force_init: true
+    backend_config:
+      region: "ap-south-1"
+      bucket: "navneetlalg-testing-terrform-using-ansible"
+      key: "backend.tfstate"
