@@ -1,0 +1,14 @@
+- name: Install AWS and Terraform
+  hosts: webservers
+  connection: ssh
+  # Uncomment following line to run it locally
+  # hosts: localhost
+  # connection: local
+  become: yes
+  roles: 
+    - role: awscli
+      aws_output_format: 'json'
+      aws_region: 'ap-south-1'
+      aws_access_key_id: 'SUPER_SECRET_ACCESS_KEY_ID'
+      aws_secret_access_key: 'SUPER_SECRET_ACCESS_KEY'
+    - terraform

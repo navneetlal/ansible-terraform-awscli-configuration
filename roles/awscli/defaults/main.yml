@@ -1,0 +1,10 @@
+aws_cli_user: '{{ ansible_user }}'
+aws_output_format: 'json'
+aws_region: 'ap-south-1'
+aws_access_key_id: 'YOUR_ACCESS_KEY_ID'
+aws_secret_access_key: 'YOUR_SECRET_ACCESS_KEY'
+
+python_packages:
+- python-apt
+- python-pip
+- python3-pip
